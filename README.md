@@ -1,8 +1,10 @@
+This is the backend that we use to update our database
+
 How to Run:
 
 ```
 pip install -r requirements.txt
-python main.py
+python3 main.py
 ```
 
 How to Deploy:
