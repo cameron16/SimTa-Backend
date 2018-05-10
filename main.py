@@ -101,7 +101,7 @@ def update_washer_info():
     post_location = body.get('location')
     post_washer_status = body.get('washer_status')
     
-    mongo.db.washer.update({'location':post_location, 'washer_num':post_washer_num}, {"$set": {"laundry_status":post_washer_status}}, upsert=True)
+    mongo.db.washer.update({'location':post_location, 'washer_num':post_washer_num}, {"$set": {"washer_status":post_washer_status}}, upsert=True)
 
     return Response(status=201)
 
@@ -115,7 +115,7 @@ def update_dryer_info():
     post_location = body.get('location')
     post_dryer_status = body.get('dryer_status')
     
-    mongo.db.dryer.update({'location':post_location, 'dryer_num':post_dryer_num}, {"$set": {"laundry_status":post_dryer_status}}, upsert=True)
+    mongo.db.dryer.update({'location':post_location, 'dryer_num':post_dryer_num}, {"$set": {"dryer_status":post_dryer_status}}, upsert=True)
 
     return Response(status=201)
 
